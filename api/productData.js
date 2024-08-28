@@ -1,7 +1,7 @@
 const baseUrl = 'https://localhost:7007';
 
 // PROMISE TO FETCH ALL PRODUCTS
-const getProducts = () => new Promise((resolve, reject) => {
+export const getProducts = () => new Promise((resolve, reject) => {
   fetch(`${baseUrl}/api/products`, {
     method: 'GET',
     headers: {
@@ -9,7 +9,7 @@ const getProducts = () => new Promise((resolve, reject) => {
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => resolve((data)))
     .catch(reject);
 });
 
@@ -26,6 +26,5 @@ const getSingleProduct = (id) => new Promise((resolve, reject) => {
 });
 
 export {
-  getProducts,
   getSingleProduct,
 };
