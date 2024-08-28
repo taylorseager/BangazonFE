@@ -1,6 +1,4 @@
-// import { clientCredentials } from '../utils/client';
-
-const baseUrl = "https://localhost:7007"
+const baseUrl = 'https://localhost:7007';
 
 // PROMISE TO FETCH ALL PRODUCTS
 const getProducts = () => new Promise((resolve, reject) => {
@@ -23,7 +21,7 @@ const getSingleProduct = (id) => new Promise((resolve, reject) => {
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => resolve((data)))
     .catch(reject);
 });
 
