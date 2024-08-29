@@ -10,7 +10,7 @@ export default function ProductCard({ productObj }) {
         <Card.Text>${productObj.price}</Card.Text>
         <Card.Text>Quantity Available: {productObj.quantityAvailable}</Card.Text>
       </Card.Body>
-      <Button variant="primary" href="/product/{id}">Product Details</Button>
+      <Button variant="primary" href={`/product/${productObj.id}`}>Product Details</Button>
       <Button variant="success" href="/cart">Add to Cart</Button>
     </Card>
   );
