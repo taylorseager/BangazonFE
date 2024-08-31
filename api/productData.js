@@ -14,7 +14,6 @@ const getProducts = () => new Promise((resolve, reject) => {
 });
 
 const getSingleProduct = (id) => new Promise((resolve, reject) => {
-  console.warn('api', id);
   fetch(`${baseUrl}/api/products/${id}`, {
     method: 'GET',
     headers: {
